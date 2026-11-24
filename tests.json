@@ -1,0 +1,136 @@
+{
+ "title": "Тести ЛБФМК Марченко",
+ "updated": "24.11.2026",
+ "groups": [
+  {
+   "id": "farm",
+   "title": "Фармакологія",
+   "items": [
+    {
+     "title": "Загальне контрольне тестування з фармакології",
+     "desc": "3044 тести «Крок» · 57 підтем · до 5 підтем на вибір",
+     "test": "/krok-antimicrobials/farm.html",
+     "main": true
+    },
+    {
+     "title": "Засоби, що впливають на ЦНС (спільний тест)",
+     "desc": "Пригнічують ЦНС + психотропні ЛЗ · 1296 завдань",
+     "test": "/krok-antimicrobials/cnsall.html",
+     "trainer": "/krok-antimicrobials/Тренажер_ЦНС_підсумковий_2027.html",
+     "main": true
+    },
+    {
+     "title": "Підсумкове тренування, I семестр",
+     "desc": "Рецептура, загальна фармакологія, протимікробні, ПНС, ЦНС, психотропні",
+     "trainer": "/krok-antimicrobials/Тренажер_Фармакологія_I_семестр_2027.html",
+     "main": true
+    },
+    {
+     "title": "Підсумкове тренування, II семестр",
+     "desc": "Органи дихання, травлення, міометрій, ССС, гомеостаз",
+     "trainer": "/krok-antimicrobials/Тренажер_Фармакологія_II_семестр_2027.html",
+     "main": true
+    },
+    {
+     "title": "Медична рецептура",
+     "test": "/krok-antimicrobials/rec.html",
+     "book": "/krok-antimicrobials/Підручник_Рецептура_2027.html",
+     "trainer": "/krok-antimicrobials/Тренажер_Рецептура_2027.html",
+     "extra": [
+      [
+       "Конструктор рецепта",
+       "/krok-antimicrobials/Конструктор_рецепта_2027.html"
+      ]
+     ]
+    },
+    {
+     "title": "Загальна фармакологія",
+     "test": "/krok-antimicrobials/zag.html",
+     "book": "/krok-antimicrobials/Підручник_Загальна_фармакологія_2027.html",
+     "trainer": "/krok-antimicrobials/Тренажер_Загальна_фармакологія_2027.html",
+     "extra": []
+    },
+    {
+     "title": "Протимікробні лікарські засоби",
+     "test": "/krok-antimicrobials/index.html",
+     "book": "/krok-antimicrobials/Підручник_Протимікробні_ЛЗ_2027.html",
+     "trainer": "/krok-antimicrobials/Тренажер_Протимікробні_ЛЗ_2027.html",
+     "extra": []
+    },
+    {
+     "title": "ЛЗ, що впливають на периферичну нервову систему",
+     "test": "/krok-antimicrobials/pns.html",
+     "book": "/krok-antimicrobials/Підручник_ЛЗ_ПНС_2027.html",
+     "trainer": "/krok-antimicrobials/Тренажер_ЛЗ_ПНС_2027.html",
+     "extra": []
+    },
+    {
+     "title": "Засоби, що пригнічують ЦНС",
+     "test": "/krok-antimicrobials/cns.html",
+     "book": "/krok-antimicrobials/Підручник_ЦНС_депресанти_2026.html",
+     "trainer": "/krok-antimicrobials/Тренажер_ЦНС_депресанти_2027.html",
+     "extra": []
+    },
+    {
+     "title": "Психотропні лікарські засоби",
+     "test": "/krok-antimicrobials/psy.html",
+     "book": "/krok-antimicrobials/Підручник_Психотропні_ЛЗ_2027.html",
+     "trainer": "/krok-antimicrobials/Тренажер_Психотропні_ЛЗ_2027.html",
+     "extra": []
+    },
+    {
+     "title": "ЛЗ, що впливають на серцево-судинну систему та функцію нирок",
+     "test": "/krok-antimicrobials/sss.html",
+     "book": "/krok-antimicrobials/Підручник_ССС_2027.html",
+     "trainer": "/krok-antimicrobials/Тренажер_ССС_2027.html",
+     "extra": []
+    },
+    {
+     "title": "ЛЗ, що впливають на органи дихання, травлення та міометрій",
+     "test": "/krok-antimicrobials/vo.html",
+     "book": "/krok-antimicrobials/Підручник_Виконавчі_органи_2027.html",
+     "trainer": "/krok-antimicrobials/Тренажер_Виконавчі_органи_2027.html",
+     "extra": []
+    },
+    {
+     "title": "ЛЗ, що впливають на гомеостаз та обмінні процеси",
+     "test": "/krok-antimicrobials/gom.html",
+     "book": "/krok-antimicrobials/Підручник_Гомеостаз_2027.html",
+     "trainer": "/krok-antimicrobials/Тренажер_Гомеостаз_2027.html",
+     "extra": []
+    }
+   ]
+  },
+  {
+   "id": "fg",
+   "title": "Фармакогнозія",
+   "items": [
+    {
+     "title": "Контрольне тестування з фармакогнозії",
+     "desc": "1220 тестів + 132 офіційні тести ЄДКІ · до 3 тем · 12-бальна шкала",
+     "test": "/edki-farmakognoziya/test.html",
+     "main": true
+    },
+    {
+     "title": "Гайд ЄДКІ: фармакогнозія",
+     "desc": "Теорія, флеш-картки, тренування, симуляція ЄДКІ",
+     "trainer": "/edki-farmakognoziya/"
+    }
+   ]
+  },
+  {
+   "id": "atl",
+   "title": "Аптечна технологія ліків",
+   "items": [
+    {
+     "title": "Контрольне тестування з АТЛ",
+     "desc": "1977 завдань формату «Крок»",
+     "test": "/edki-farmakognoziya/ATL_Test.html",
+     "book": "/edki-farmakognoziya/ATL_Pidruchnyk.html",
+     "trainer": "/edki-farmakognoziya/ATL_Trenazher.html",
+     "main": true
+    }
+   ]
+  }
+ ]
+}

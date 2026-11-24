@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Тести ЛБФМК Марченко</title>
+<meta name="theme-color" content="#1F4E79">
+<meta name="description" content="Контрольні тести, підручники й тренажери з фармакології, фармакогнозії та аптечної технології ліків">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Тести ЛБФМК">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>
+:root{--navy:#1F4E79;--navy-d:#0d2d4a;--red:#C00000;--green:#2E7D32;--bg:#f5f7fa;--card:#fff;--ink:#1d2732;--soft:#5b6774;--line:#e1e6ec;--tint:#eaf1f8}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#10161d;--card:#18212b;--ink:#e6edf3;--soft:#9fb0c0;--line:#2a3643;--tint:#1d2c3b}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-text-size-adjust:100%}
+header{background:var(--navy-d);color:#fff;padding:calc(14px + env(safe-area-inset-top)) 16px 14px;display:flex;gap:12px;align-items:center}
+header img{width:44px;height:44px;border-radius:10px;flex:none}
+header h1{font-size:18px;margin:0;line-height:1.2}
+header p{margin:2px 0 0;font-size:12px;color:#a9c0da}
+main{max-width:760px;margin:0 auto;padding:14px 16px calc(40px + env(safe-area-inset-bottom))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
+.card h2{font-size:15px;margin:0 0 8px;color:var(--navy)}
+@media (prefers-color-scheme:dark){.card h2{color:#8fb8e0}}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+input{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;min-width:0;flex:1 1 160px}
+input:focus{outline:2px solid var(--navy);outline-offset:1px}
+.btn{font:inherit;font-weight:700;border:0;border-radius:10px;padding:10px 14px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap}
+.btn.p{background:var(--navy);color:#fff}.btn.s{background:var(--tint);color:var(--navy)}
+@media (prefers-color-scheme:dark){.btn.s{color:#cfe2f5}}
+.hint{font-size:12.5px;color:var(--soft);margin:6px 0 0}
+.ok{color:var(--green)}.err{color:var(--red)}
+.tabs{display:flex;gap:6px;overflow-x:auto;margin:16px 0 10px;padding-bottom:2px;scrollbar-width:none}
+.tabs button{font:inherit;font-weight:700;font-size:14px;border:1.5px solid var(--line);background:var(--card);color:var(--soft);border-radius:20px;padding:8px 14px;cursor:pointer;white-space:nowrap}
+.tabs button.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:10px}
+.item.main{border-left:5px solid var(--navy)}
+.item h3{font-size:15.5px;margin:0;line-height:1.35}
+.item .d{font-size:13px;color:var(--soft);margin:3px 0 0}
+.item .row{margin-top:10px}
+.item .btn{padding:9px 12px;font-size:14px}
+.sub{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin:18px 2px 8px}
+.res{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.res:last-child{border:0}.res .t{font-size:14px}.res .m{font-size:12px;color:var(--soft)}.res .p{font-weight:800;font-size:16px;text-align:right}
+.badge{display:inline-block;font-size:11px;font-weight:700;border-radius:6px;padding:1px 6px;margin-left:4px;background:#fdecec;color:var(--red)}
+#install{display:none}
+#scanBox{display:none;margin-top:10px;position:relative}
+#scanBox video{width:100%;border-radius:10px;background:#000;max-height:320px;object-fit:cover}
+footer{font-size:12px;color:var(--soft);text-align:center;margin-top:24px}
+</style>
+</head>
+<body>
+<header>
+  <img src="/icon-192.png" alt="">
+  <div><h1>Тести ЛБФМК Марченко</h1><p>Луцький базовий фаховий медичний коледж · фармакологія, фармакогнозія, АТЛ</p></div>
+</header>
+<main>
+  <div class="card" id="install">
+    <h2>Встановіть застосунок на телефон</h2>
+    <div id="installTxt"></div>
+  </div>
+
+  <div class="card">
+    <h2>Мої дані</h2>
+    <div class="row">
+      <input id="nm" placeholder="Прізвище та ім'я" autocomplete="name">
+      <input id="gr" placeholder="Група (напр. 2-А)" style="flex:0 1 140px">
+    </div>
+    <p class="hint" id="meHint">Дані зберігаються лише на цьому телефоні й автоматично підставляються в кожен тест.</p>
+  </div>
+
+  <div class="card">
+    <h2>Варіант від викладача</h2>
+    <div class="row">
+      <input id="code" placeholder="Вставте посилання від викладача" inputmode="url" autocomplete="off">
+      <button class="btn p" id="go">Відкрити</button>
+      <button class="btn s" id="scan" hidden>📷 Сканувати QR</button>
+    </div>
+    <div id="scanBox"><video id="vid" playsinline muted></video><p class="hint">Наведіть камеру на QR-код варіанта. <a href="#" id="scanStop">Скасувати</a></p></div>
+    <p class="hint" id="codeHint">Посилання або QR-код варіанта дає викладач на занятті.</p>
+  </div>
+
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div id="list"></div>
+
+  <footer>
+    <p><b>Режим тестування.</b> Вихід із тесту (перемикання на іншу програму чи вкладку) фіксується й надсилається викладачу; після 3-го порушення тест завершується автоматично. Перед тестом увімкніть «Не турбувати».</p>
+    <p id="upd"></p>
+    <p>Розробник: Марченко А. І. · Луцький базовий фаховий медичний коледж</p>
+  </footer>
+</main>
+<script>
+(function(){
+var $=function(id){return document.getElementById(id);};
+function ls(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k)||'null');localStorage.setItem(k,JSON.stringify(v));}catch(e){return null;}}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+var standalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
+
+/* --- мої дані --- */
+var st=ls('lbfmk:student')||{};$('nm').value=st.name||'';$('gr').value=st.group||'';
+function saveMe(){var n=$('nm').value.trim().replace(/\s+/g,' '),g=$('gr').value.trim();ls('lbfmk:student',{name:n,group:g});
+  $('meHint').innerHTML=(n&&g)?'<span class="ok">✓ Збережено.</span> Дані автоматично підставлятимуться в кожен тест.':'Дані зберігаються лише на цьому телефоні й автоматично підставляються в кожен тест.';}
+$('nm').addEventListener('change',saveMe);$('gr').addEventListener('change',saveMe);if(st.name&&st.group)saveMe();
+
+/* --- посилання від викладача --- */
+function norm(t){t=(t||'').trim();if(!t)return null;
+  try{var u=new URL(t,location.origin+'/krok-antimicrobials/');if(u.origin!==location.origin)return null;return u.pathname+u.search;}catch(e){return null;}}
+function openCode(t){var p=norm(t);if(!p){$('codeHint').innerHTML='<span class="err">Це не посилання на тест викладача. Перевірте й спробуйте ще раз.</span>';return;}
+  saveMe();location.href=p;}
+$('go').onclick=function(){openCode($('code').value);};
+$('code').addEventListener('keydown',function(e){if(e.key==='Enter')openCode(this.value);});
+var stream=null,timer=null;
+if('BarcodeDetector' in window&&navigator.mediaDevices){$('scan').hidden=false;}
+function stopScan(){if(timer)clearInterval(timer);timer=null;if(stream)stream.getTracks().forEach(function(t){t.stop();});stream=null;$('scanBox').style.display='none';}
+$('scanStop').onclick=function(e){e.preventDefault();stopScan();};
+$('scan').onclick=function(){
+  var det=new BarcodeDetector({formats:['qr_code']});
+  navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'}}).then(function(s){stream=s;var v=$('vid');v.srcObject=s;v.play();$('scanBox').style.display='block';
+    timer=setInterval(function(){det.detect(v).then(function(c){if(c&&c.length){var raw=c[0].rawValue;stopScan();$('code').value=raw;openCode(raw);}}).catch(function(){});},350);
+  }).catch(function(){$('codeHint').innerHTML='<span class="err">Немає доступу до камери. Дозвольте доступ або вставте посилання вручну.</span>';});
+};
+
+/* --- встановлення --- */
+var deferred=null;
+window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();deferred=e;showInstall();});
+function showInstall(){if(standalone)return;var ios=/iPhone|iPad|iPod/.test(navigator.userAgent);$('install').style.display='block';
+  if(deferred){$('installTxt').innerHTML='<p class="hint" style="margin:0 0 8px">Застосунок з’явиться на головному екрані й відкриватиме тести на весь екран.</p><button class="btn p" id="instBtn">⬇ Встановити</button>';
+    $('instBtn').onclick=function(){deferred.prompt();deferred.userChoice.then(function(){deferred=null;$('install').style.display='none';});};}
+  else if(ios){$('installTxt').innerHTML='<p class="hint" style="margin:0">Відкрийте цю сторінку в <b>Safari</b>, натисніть <b>«Поділитися»</b> (квадрат зі стрілкою) → <b>«На початковий екран»</b> → <b>«Додати»</b>.</p>';}
+  else{$('installTxt').innerHTML='<p class="hint" style="margin:0">У меню браузера Chrome (⋮) оберіть <b>«Установити застосунок»</b> або <b>«Додати на головний екран»</b>.</p>';}}
+if(!standalone)setTimeout(showInstall,1200);
+if('serviceWorker' in navigator)navigator.serviceWorker.register('/sw.js').catch(function(){});
+
+/* --- перелік ресурсів --- */
+var DATA=null,tab=ls('lbfmk:tab')||'farm';
+function itemHTML(it){
+  var b=[];
+  if(it.test)b.push('<a class="btn p" href="'+esc(it.test)+'">📝 Тест</a>');
+  if(it.book)b.push('<a class="btn s" href="'+esc(it.book)+'" target="_blank" rel="noopener">📖 Підручник</a>');
+  if(it.trainer)b.push('<a class="btn s" href="'+esc(it.trainer)+'" target="_blank" rel="noopener">🎯 Тренажер</a>');
+  (it.extra||[]).forEach(function(x){b.push('<a class="btn s" href="'+esc(x[1])+'" target="_blank" rel="noopener">'+esc(x[0])+'</a>');});
+  return '<div class="item'+(it.main?' main':'')+'"><h3>'+esc(it.title)+'</h3>'+(it.desc?'<p class="d">'+esc(it.desc)+'</p>':'')+'<div class="row">'+b.join('')+'</div></div>';}
+function results(){var h=ls('lbfmk:history')||[];
+  if(!h.length)return '<div class="card"><p class="hint" style="margin:0">Тут з’являться результати тестів, пройдених на цьому телефоні. Офіційні результати отримує викладач.</p></div>';
+  return '<div class="card">'+h.map(function(r){return '<div class="res"><div class="t">'+esc(r.t)+(r.killed?'<span class="badge">завершено за порушення</span>':r.viol?'<span class="badge">порушень: '+r.viol+'</span>':'')+'</div><div class="p">'+esc(r.pct)+' %</div><div class="m">'+esc(r.at)+' · '+esc(r.pass)+'</div><div class="m" style="text-align:right">'+esc(r.g)+'</div></div>';}).join('')+'</div>';}
+function render(){
+  var tabs=DATA.groups.map(function(g){return [g.id,g.title];}).concat([['res','Мої результати']]);
+  if(!tabs.some(function(t){return t[0]===tab;}))tab=tabs[0][0];
+  $('tabs').innerHTML=tabs.map(function(t){return '<button role="tab" class="'+(t[0]===tab?'on':'')+'" data-t="'+t[0]+'">'+esc(t[1])+'</button>';}).join('');
+  if(tab==='res'){$('list').innerHTML=results();return;}
+  var g=DATA.groups.filter(function(x){return x.id===tab;})[0],main=g.items.filter(function(i){return i.main;}),rest=g.items.filter(function(i){return !i.main;});
+  $('list').innerHTML=(main.length&&rest.length?'<div class="sub">Підсумкові тести й тренування</div>':'')+main.map(itemHTML).join('')+(rest.length?'<div class="sub">За темами</div>'+rest.map(itemHTML).join(''):'');
+}
+$('tabs').onclick=function(e){var t=e.target.getAttribute('data-t');if(t){tab=t;ls('lbfmk:tab',t);render();}};
+fetch('/tests.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(d){DATA=d;$('upd').textContent='Перелік оновлено: '+(d.updated||'');render();})
+  .catch(function(){$('list').innerHTML='<div class="card"><p class="err" style="margin:0">Не вдалося завантажити перелік тестів. Перевірте підключення до інтернету.</p></div>';});
+})();
+</script>
+</body>
+</html>
